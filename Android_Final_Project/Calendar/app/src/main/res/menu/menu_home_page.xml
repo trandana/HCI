@@ -1,0 +1,31 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.hci.calendar.HomePage">
+
+    <item
+        android:id="@+id/action_home"
+        android:orderInCategory="0"
+        android:title="@string/action_home"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_my_calendar"
+        android:orderInCategory="1"
+        android:title="@string/action_mycal"
+         />
+    <item
+        android:id="@+id/action_friends"
+        android:orderInCategory="2"
+        android:title="@string/action_friends"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_meeting"
+        android:orderInCategory="3"
+        android:title="@string/action_meeting"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="4"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+</menu>

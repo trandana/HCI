@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_my_calendar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="5dp"
+    android:paddingLeft="2dp"
+    android:paddingRight="2dp"
+    android:paddingTop="2dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.hci.calendar.MyCalendar"
+    tools:showIn="@layout/activity_my_calendar">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="10"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <CalendarView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="1dp"
+            android:id="@+id/calendarView" />
+
+        <TextView
+            android:text="@string/upcoming"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal"
+            android:textColor="@android:color/background_light"
+            android:background="@android:color/background_dark"
+            android:textSize="14sp"
+            android:id="@+id/upcomingtitle"
+            android:layout_marginBottom="2dp" />
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/upcomingInfo" />
+
+    </LinearLayout>
+
+</RelativeLayout>

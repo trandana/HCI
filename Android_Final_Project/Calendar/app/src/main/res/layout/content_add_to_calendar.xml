@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_add_to_calendar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="2dp"
+    android:paddingLeft="2dp"
+    android:paddingRight="2dp"
+    android:paddingTop="2dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.hci.calendar.AddToCalendar"
+    tools:showIn="@layout/activity_add_to_calendar">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:weightSum="4">
+
+            <TextView
+                android:text="@string/event"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/textView"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_weight="1" />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/event"
+                android:layout_weight="3"
+                android:imeOptions="actionDone"
+                android:singleLine="true"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:weightSum="4">
+
+            <TextView
+                android:text="@string/location"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/textView99"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_weight="1" />
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/loc"
+                android:layout_weight="3"
+                android:imeOptions="actionDone"
+                android:singleLine="true"/>
+        </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:weightSum="4">
+
+        <TextView
+            android:text="@string/from"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/textView1"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_weight="1" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:id="@+id/from"
+            android:layout_weight="1"
+            android:inputType="none|time"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
+            android:onClick="fromTimeClicked"
+            android:focusable="false"
+            android:editable="false" />
+
+        <TextView
+            android:text="@string/to"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/textView2"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_weight="1" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:id="@+id/to"
+            android:layout_weight="1"
+            android:inputType="none|time"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
+            android:onClick="toTimeClicked"
+            android:focusable="false"
+            android:editable="false" />
+
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:weightSum="4">
+
+
+        <CheckBox
+            android:text="@string/onetime"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/onetimecd"
+            android:layout_weight="1.8" />
+
+        <TextView
+            android:text="@string/date"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/datelabel"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_weight=".8" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:id="@+id/date"
+            android:layout_weight="1.4"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
+            android:inputType="none"
+            android:onClick="dateClicked"
+            android:editable="false"
+            android:focusable="false" />
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.6"
+            android:weightSum="2"
+            android:id="@+id/dayselection">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".8"
+            android:weightSum="4">
+
+
+        <CheckBox
+            android:text="@string/sun"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/sun"
+            android:layout_weight="1"
+            android:tag="Sunday" />
+
+        <CheckBox
+            android:text="@string/mon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/mon"
+            android:layout_weight="1"
+            android:tag="Monday" />
+
+        <CheckBox
+            android:text="@string/tue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/tue"
+            android:layout_weight="1"
+            android:tag="Tuesday" />
+
+        <CheckBox
+            android:text="@string/wed"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/wed"
+            android:layout_weight="1"
+            android:tag="Wednesday" />
+
+        </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".8"
+                android:weightSum="4">
+
+                <CheckBox
+                    android:text="@string/Thur"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/thur"
+                    android:layout_weight="1"
+                    android:tag="Thursday" />
+                <CheckBox
+                    android:text="@string/fri"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/fri"
+                    android:layout_weight="1"
+                    android:tag="Friday" />
+                <CheckBox
+                    android:text="@string/sat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/sat"
+                    android:layout_weight="1"
+                    android:tag="Saturday" />
+            </LinearLayout>
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <Button
+                android:text="@string/clear"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/clear"
+                android:layout_weight="1"
+                android:onClick="clear" />
+
+            <Button
+                android:text="@string/add"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/addevent"
+                android:layout_weight="1"
+                android:onClick="addEvent" />
+        </LinearLayout>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3.4"
+            android:id="@+id/eventslist" />
+    </LinearLayout>
+</RelativeLayout>

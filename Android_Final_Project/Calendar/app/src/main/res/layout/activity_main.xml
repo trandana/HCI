@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    tools:context="com.example.hci.calendar.MainActivity"
+    android:orientation="vertical"
+    android:weightSum="9">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:weightSum="2"
+        android:layout_weight="1">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="@string/title"
+            android:id="@+id/textView"
+            android:layout_weight=".7"
+            android:gravity="left|center_vertical"
+            android:textSize="20dp" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/title"
+            android:layout_weight="1.3"
+            android:textSize="20dp"
+            android:maxWidth="25dp"
+            android:gravity="bottom"
+            android:imeOptions="actionDone"
+            android:singleLine="true"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:weightSum="2"
+        android:layout_weight="1" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="@string/st"
+            android:id="@+id/textView2"
+            android:layout_weight=".4"
+            android:gravity="left|center_vertical"
+            android:textSize="20dp" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/start"
+            android:layout_weight=".7"
+            android:textSize="20dp"
+            android:maxWidth="25dp"
+            android:imeOptions="actionDone"
+            android:singleLine="true"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="@string/et"
+            android:id="@+id/textView3"
+            android:layout_weight=".2"
+            android:gravity="left|center_vertical"
+            android:textSize="20dp" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/end"
+            android:layout_weight=".7"
+            android:textSize="20dp"
+            android:maxWidth="25dp"
+            android:imeOptions="actionDone"
+            android:singleLine="true"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:weightSum="2"
+        android:layout_weight=".8"
+        android:gravity="center_vertical|center_horizontal">
+
+
+        <CheckBox
+            android:text="One Time Event"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/onetime" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center_vertical"
+        android:weightSum="2"
+        android:layout_weight="1"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:id="@+id/repeatset">
+
+        <TextView
+            android:text="@string/day"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="right|center_vertical"
+            android:textSize="20dp"
+            android:layout_weight=".6"
+            android:id="@+id/rdays" />
+
+        <Spinner
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/dow"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:paddingLeft="10dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:weightSum="2"
+        android:layout_weight="1"
+        android:id="@+id/onetimeset">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="@string/day"
+            android:id="@+id/textView8"
+            android:layout_weight=".3"
+            android:gravity="left|center_vertical"
+            android:textSize="20dp" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/day"
+            android:layout_weight=".3"
+            android:textSize="20dp"
+            android:maxWidth="25dp"
+            android:inputType="number"
+            android:gravity="bottom|center_vertical"
+            android:imeOptions="actionDone"
+            android:singleLine="true"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="@string/month"
+            android:id="@+id/textView9"
+            android:layout_weight=".4"
+            android:gravity="left|center_vertical"
+            android:textSize="20dp" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/month"
+            android:layout_weight=".3"
+            android:textSize="20dp"
+            android:maxWidth="25dp"
+            android:inputType="number"
+            android:imeOptions="actionDone"
+            android:singleLine="true"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="@string/year"
+            android:id="@+id/textView10"
+            android:layout_weight=".3"
+            android:gravity="left|center_vertical"
+            android:textSize="20dp" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:id="@+id/year"
+            android:layout_weight=".4"
+            android:textSize="20dp"
+            android:maxWidth="25dp"
+            android:inputType="number"
+            android:imeOptions="actionDone"
+            android:singleLine="true"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:weightSum="3"
+        android:layout_weight="1.2" >
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/clear"
+            android:id="@+id/clearbtn"
+            android:layout_weight="1"
+            android:layout_marginLeft="5px"
+            android:layout_marginRight="5px"
+            android:onClick="onClick_ClearAll" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/add"
+            android:id="@+id/addEntry"
+            android:layout_weight="1"
+            android:layout_marginLeft="5px"
+            android:layout_marginRight="5px"
+            android:onClick="addEntry" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/quer"
+            android:id="@+id/queryEmail"
+            android:layout_weight="1"
+            android:layout_marginLeft="5px"
+            android:layout_marginRight="5px"
+            android:onClick="queryEmail" />
+
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/display"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="4" />
+</LinearLayout>

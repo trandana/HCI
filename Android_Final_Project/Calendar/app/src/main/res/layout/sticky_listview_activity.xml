@@ -1,0 +1,96 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StickyListviewActivity"
+    android:orientation="vertical">
+
+
+
+    <include layout="@layout/toolbar"/>
+
+
+    <com.example.hci.calendar.StickyScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical" >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical">
+
+
+
+        <!--  Give tag sticky to the component whom you want to stik -->
+
+            <!--(android:tag="sticky") Give the sticky tag to  View which
+            you want to stick while scrolling -->
+
+
+
+        <com.rey.material.widget.TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:padding="10dp"
+            android:background="#F8F8F8"
+            android:text="TUESDAY , March 9"
+            android:tag="sticky" />
+
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+
+            android:id="@+id/list1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="5dp">
+
+        </android.support.v7.widget.RecyclerView>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#acacac">
+
+
+    <!-- Here we set tag to the textview..
+            So it will be stick when second recycleview is scroll -->
+        <com.rey.material.widget.TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:text="MONDAY , March 8"
+            android:padding="10dp"
+            android:background="#F8F8F8"
+            android:tag="sticky"
+           />
+
+</LinearLayout>
+        <android.support.v7.widget.RecyclerView
+
+            android:id="@+id/list2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="5dp">
+
+        </android.support.v7.widget.RecyclerView>
+
+
+
+    </LinearLayout>
+
+    </com.example.hci.calendar.StickyScrollView>
+
+</LinearLayout>
